@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌪️ Registro de Eventos Extremos"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome do local (cidade/bairro)"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text" />
+
+        <EditText
+            android:id="@+id/etEventType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo do evento extremo"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/edit_text" />
+
+        <EditText
+            android:id="@+id/etImpactLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Grau de impacto (leve, moderado, severo)"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/edit_text" />
+
+        <EditText
+            android:id="@+id/etEventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data do evento (ex: 2025-06-07)"
+            android:inputType="date"
+            android:padding="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/edit_text" />
+
+        <EditText
+            android:id="@+id/etAffectedPeople"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número estimado de pessoas afetadas"
+            android:inputType="number"
+            android:padding="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/edit_text" />
+
+        <Button
+            android:id="@+id/btnAddEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incluir"
+            android:layout_marginTop="16dp" />
+
+        <!-- RecyclerView  -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+</ScrollView>
